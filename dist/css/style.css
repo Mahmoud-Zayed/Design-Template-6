@@ -1,0 +1,207 @@
+/* Start General Style With Sass */
+.contact .form form input[type="submit"] {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+/* End General Style With Sass */
+/* Start General Style */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: cursive; }
+
+/* End General Style */
+/* Start Home */
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/image-01.jpg");
+  background-size: cover;
+  position: relative; }
+  .home .header ul {
+    list-style: none;
+    text-align: center;
+    margin: 0; }
+    .home .header ul li {
+      display: inline-block;
+      padding: 20px; }
+      .home .header ul li a {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none; }
+  .home .scroll-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    display: none;
+    z-index: 999; }
+  .home .best {
+    width: 300px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 60px; }
+    .home .best p {
+      color: white; }
+    .home .best p.one {
+      font-size: 35px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top: 24px; }
+    .home .best p.two {
+      margin-top: 5px;
+      font-size: 18px; }
+
+/* End Home */
+/* Start About */
+.about {
+  width: 100%;
+  height: 600px;
+  background-image: url("../images/image-02.jpg");
+  background-size: cover;
+  overflow: hidden; }
+  .about .about_us {
+    width: 35%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    float: right;
+    margin-right: 5%;
+    text-align: center;
+    padding-top: 7%; }
+    .about .about_us h2 {
+      margin: 0;
+      color: #ffff73;
+      padding-bottom: 3%; }
+    .about .about_us p {
+      color: #eee;
+      line-height: 2;
+      padding: 3% 5px 0; }
+
+/* End About */
+/* Start Service */
+.service {
+  width: 100%;
+  height: 600px;
+  background-image: url("../images/image-03.jpg");
+  background-size: cover;
+  overflow: hidden; }
+  .service .service_us {
+    width: 35%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    float: left;
+    margin-left: 5%;
+    text-align: center;
+    padding-top: 5%; }
+    .service .service_us h2 {
+      margin: 0;
+      color: #ffff73;
+      padding-bottom: 3%; }
+    .service .service_us p {
+      color: #eee;
+      line-height: 2;
+      padding: 3% 5px 0; }
+
+/* End Service */
+/* Start Testimonial */
+.testimonial {
+  width: 100%;
+  height: 600px;
+  background-image: url("../images/image-04.jpg");
+  background-size: cover; }
+  .testimonial h2 {
+    margin: 0;
+    text-align: center;
+    padding-top: 7%; }
+  .testimonial .test {
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 300px;
+    float: left;
+    margin-left: 2.5%;
+    margin-top: 5%;
+    text-align: center;
+    color: white;
+    padding: 20px; }
+    .testimonial .test i {
+      padding-top: 5%; }
+    .testimonial .test p {
+      line-height: 1.4;
+      color: #eee;
+      text-align: left;
+      text-transform: capitalize; }
+
+/* End Testimonial */
+/* Start Contact */
+.contact {
+  width: 100%;
+  height: 550px;
+  background-image: url("../images/image-05.jpg");
+  background-size: cover; }
+  .contact .form {
+    width: 35%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    float: right;
+    margin-right: 5%;
+    text-align: center;
+    padding: 3% 0; }
+    .contact .form h2 {
+      margin: 0;
+      padding: 6.5% 0;
+      color: #ffff73; }
+    .contact .form form {
+      width: 75%;
+      margin: auto; }
+      .contact .form form input, .contact .form form textarea {
+        display: block;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        margin: 10px;
+        border: 0;
+        outline: 0;
+        color: #fff;
+        border-radius: 5px; }
+      .contact .form form textarea::placeholder {
+        text-align: center; }
+      .contact .form form input[type="submit"] {
+        width: 35%;
+        float: left;
+        cursor: pointer; }
+        .contact .form form input[type="submit"]:hover {
+          color: #ffff73;
+          background-color: rgba(0, 0, 0, 0.6); }
+
+/* End Contact */
+/* Start Footer */
+footer {
+  position: relative; }
+  footer .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0 35px;
+    width: 35%; }
+    footer .footer p {
+      font-weight: normal;
+      color: #eee; }
+
+/* End Footer */

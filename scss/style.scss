@@ -1,0 +1,255 @@
+/* Start General Style With Sass */ 
+$mainColor: #ffff73;
+    
+// Start prefixes //    // prefixes mixin    // auto add prefixes to properties
+@mixin prefixer($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+};
+// End prefixes //
+
+// Start Extend //
+%transition {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+// End Extend //
+/* End General Style With Sass */ 
+
+/* Start General Style */ 
+* {
+    @include prefixer(box-sizing, border-box, webkit moz o ms);
+}
+body {
+    font-family: cursive;
+}
+/* End General Style */ 
+
+/* Start Home */
+.home {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/image-01.jpg');
+    background-size: cover;
+    position: relative;
+    .header {
+        ul {
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            li {
+                display: inline-block;
+                padding: 20px;
+                a {
+                    color: #fff;
+                    font-size: 20px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    // scroll-nav
+    .scroll-nav {
+        background-color: rgba(#000, 0.8);
+        color: #fff;
+        width: 100%;
+        top: 0;
+        position: fixed;
+        display: none;
+        z-index: 999;
+    }
+    .best {
+        width: 300px;
+        height: 120px;
+        background-color: rgba(#000, 0.3);
+        border-radius: 2px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        margin-top: 60px;
+        p {
+            color: white;
+        }
+        p.one {
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 24px;
+        }
+        p.two {
+            margin-top: 5px;
+            font-size: 18px;
+        }
+    }
+}
+/* End Home */
+
+/* Start About */
+.about {
+    width: 100%;
+    height: 600px;
+    background-image: url('../images/image-02.jpg');
+    background-size: cover;
+    overflow: hidden;
+    .about_us {
+        width: 35%;
+        height: 100%;
+        background-color: rgba(#000, 0.3);
+        float: right;
+        margin-right: 5%;
+        text-align: center;
+        padding-top: 7%;
+        h2 {
+            margin: 0;
+            color: $mainColor;
+            padding-bottom: 3%;
+        }
+        p {
+            color: #eee;
+            line-height: 2;
+            padding: 3% 5px 0;
+        }
+    }
+}
+/* End About */
+
+/* Start Service */ 
+.service {
+    width: 100%;
+    height: 600px;
+    background-image: url('../images/image-03.jpg');
+    background-size: cover;
+    overflow: hidden;
+    .service_us {
+        width: 35%;
+        height: 100%;
+        background-color: rgba(#000, 0.3);
+        float: left;
+        margin-left: 5%;
+        text-align: center;
+        padding-top: 5%;
+        h2 {
+            margin: 0;
+            color: $mainColor;
+            padding-bottom: 3%;
+        }
+        p {
+            color: #eee;
+            line-height: 2;
+            padding: 3% 5px 0;
+        }
+    }
+}
+/* End Service */ 
+
+/* Start Testimonial */
+.testimonial {
+    width: 100%;
+    height: 600px;
+    background-image: url('../images/image-04.jpg');
+    background-size: cover;
+    h2 {
+        margin: 0;
+        text-align: center;
+        padding-top: 7%;
+    }
+    .test {
+        width: 30%;
+        background-color: rgba(#000, 0.3);
+        height: 300px;
+        float: left;
+        margin-left: 2.5%;
+        margin-top: 5%;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        i {
+            padding-top: 5%;
+        }
+        p {
+            line-height: 1.4;
+            color: #eee;
+            text-align: left;
+            text-transform: capitalize;
+        }
+    }
+}
+/* End Testimonial */
+
+/* Start Contact */
+.contact {
+    width: 100%;
+    height: 550px;
+    background-image: url('../images/image-05.jpg');
+    background-size: cover;
+    .form {
+        width: 35%;
+        height: 100%;
+        background-color: rgba(#000, 0.3);
+        float: right;
+        margin-right: 5%;
+        text-align: center;
+        padding: 3% 0;
+        h2 {
+            margin: 0;
+            padding: 6.5% 0;
+            color: $mainColor;
+        }
+        form {
+            width: 75%;
+            margin: auto;
+            input ,textarea {
+                display: block;
+                width: 100%;
+                background-color: rgba(#000, 0.5);
+                padding: 10px;
+                margin: 10px;
+                border: 0;
+                outline: 0;
+                color: #fff;
+                border-radius: 5px;
+            }
+            textarea::placeholder {
+                text-align: center;
+            }
+            input[type="submit"] {
+                @extend %transition;
+                width: 35%;
+                float: left;
+                cursor: pointer;
+                &:hover {
+                    color: $mainColor;
+                    background-color: rgba(#000, 0.6);
+                }
+            }
+        }
+    }
+}
+/* End Contact */
+
+/* Start Footer */
+footer {
+    position: relative;
+    .footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 9;
+        background-color: rgba(#000, 0.3);
+        padding: 0 35px;
+        width: 35%;
+        p {
+            font-weight: normal;
+            color: #eee;
+        }
+    }
+}
+/* End Footer */
+
